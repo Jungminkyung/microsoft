@@ -1,0 +1,20 @@
+참고 : https://docs.microsoft.com/ko-kr/azure/cognitive-services/face/quickstarts/php
+
+구글Face 에 비해 장점 : jpg파일을 분석을 위해 업로드할 필요 없이, 이미 존재하는 웹url을 사용해서 분석이 가능함.
+
+=======================================
+HTTP_Request2를 설치하기 위해 Pear가 설치되어야 한다.
+wget http://pear.php.net/go-pear.phar
+php go-pear.phar
+엔터- 설치
+pear --version
+=======================================
+
+HTTP_Request2설치
+pear install http_request2
+find / -name "HTTP_REQUEST2*"
+cd /tmp/pear/install
+tar xvfzP HTTP_Request2-2.3.0.tgz
+cd HTTP_Request2-2.3.0
+HTTP 폴더를 사용할 곳으로 옮겨준다. ( 소스에서 require_once 'HTTP/Request2.php' )
+이후HTTp_Request2클래스가 사용가능하다 ( $request = new Http_Request2($uriBase . '/detect');   )
