@@ -18,3 +18,98 @@ tar xvfzP HTTP_Request2-2.3.0.tgz
 cd HTTP_Request2-2.3.0
 HTTP 폴더를 사용할 곳으로 옮겨준다. ( 소스에서 require_once 'HTTP/Request2.php' )
 이후HTTp_Request2클래스가 사용가능하다 ( $request = new Http_Request2($uriBase . '/detect');   )
+
+
+
+
+리턴값 예시 ( 2018-12-28 )
+
+[
+    {
+        "faceId": "7f85577a-4b84-4b0c-825d-5932dea3e139",
+        "faceRectangle": {
+            "top": 211,
+            "left": 239,
+            "width": 180,
+            "height": 180
+        },
+        "faceAttributes": {
+            "smile": 0,
+            "headPose": {
+                "pitch": 0,
+                "roll": -2.3,
+                "yaw": 2
+            },
+            "gender": "female",
+            "age": 22,
+            "facialHair": {
+                "moustache": 0,
+                "beard": 0,
+                "sideburns": 0
+            },
+            "glasses": "NoGlasses",
+            "emotion": {
+                "anger": 0,
+                "contempt": 0.001,
+                "disgust": 0,
+                "fear": 0,
+                "happiness": 0,
+                "neutral": 0.98,
+                "sadness": 0.018,
+                "surprise": 0
+            },
+            "blur": {
+                "blurLevel": "medium",
+                "value": 0.49
+            },
+            "exposure": {
+                "exposureLevel": "goodExposure",
+                "value": 0.7
+            },
+            "noise": {
+                "noiseLevel": "medium",
+                "value": 0.45
+            },
+            "makeup": {
+                "eyeMakeup": false,
+                "lipMakeup": true
+            },
+            "accessories": [],
+            "occlusion": {
+                "foreheadOccluded": false,
+                "eyeOccluded": false,
+                "mouthOccluded": false
+            },
+            "hair": {
+                "bald": 0.16,
+                "invisible": false,
+                "hairColor": [
+                    {
+                        "color": "black",
+                        "confidence": 0.99
+                    },
+                    {
+                        "color": "other",
+                        "confidence": 0.62
+                    },
+                    {
+                        "color": "gray",
+                        "confidence": 0.61
+                    },
+                    {
+                        "color": "brown",
+                        "confidence": 0.43
+                    },
+                    {
+                        "color": "blond",
+                        "confidence": 0.12
+                    },
+                    {
+                        "color": "red",
+                        "confidence": 0.04
+                    }
+                ]
+            }
+        }
+    }
+]
